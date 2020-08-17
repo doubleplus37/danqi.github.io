@@ -31,15 +31,6 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习组队</title>
-    <url>/posts/51278.html</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>机器学习初学课程</title>
     <url>/posts/4661ff3d.html</url>
     <content><![CDATA[<h2 id="1-导论"><a href="#1-导论" class="headerlink" title="1.导论"></a>1.导论</h2><ul>
@@ -83,6 +74,15 @@
         <tag>机器学习</tag>
         <tag>吴恩达</tag>
         <tag>机器学习入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习组队</title>
+    <url>/posts/51278.html</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>python</tag>
       </tags>
   </entry>
 </search>
