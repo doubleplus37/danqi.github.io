@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>My first blog</title>
-    <url>/2020/08/15/11206/</url>
-    <content><![CDATA[<p>为了组队记录自己的学习过程注册的Blog,希望今后能够坚持下来！</p>
-<p>网站是根据这一篇博客建立的：<a href="https://echoshanyushi.github.io/2020/02/07/34289/">here</a></p>
-]]></content>
-      <tags>
-        <tag>单琦</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
-    <url>/2020/08/15/16107/</url>
+    <url>/posts/16107.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <a id="more"></a>
 
@@ -31,12 +21,68 @@
 ]]></content>
   </entry>
   <entry>
+    <title>My first blog</title>
+    <url>/posts/11206.html</url>
+    <content><![CDATA[<p>为了组队记录自己的学习过程注册的Blog,希望今后能够坚持下来！</p>
+<p>网站是根据这一篇博客建立的：<a href="https://echoshanyushi.github.io/2020/02/07/34289/">here</a></p>
+]]></content>
+      <tags>
+        <tag>单琦</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习组队</title>
-    <url>/2020/08/15/51278/</url>
+    <url>/posts/51278.html</url>
     <content><![CDATA[]]></content>
       <tags>
         <tag>机器学习</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习初学课程</title>
+    <url>/posts/4661ff3d.html</url>
+    <content><![CDATA[<h2 id="1-导论"><a href="#1-导论" class="headerlink" title="1.导论"></a>1.导论</h2><ul>
+<li>ML用于数据挖掘、推荐系统、以及学习人类大脑如何运作。</li>
+</ul>
+<blockquote>
+<p>什么是机器学习？</p>
+</blockquote>
+<p>Arthur Samuel(1959)：gives computers the ability to learn without being explicitly programmed.</p>
+<p>Tom Mitchell(1998): 对于任务T，通过完成T的经验E，来提高对于任务T的完成率。</p>
+<a id="more"></a>
+
+<h2 id="2-监督以及无监督学习"><a href="#2-监督以及无监督学习" class="headerlink" title="2.监督以及无监督学习"></a>2.监督以及无监督学习</h2><ul>
+<li>监督学习：给出一系列<strong>真实的</strong>输入，并告诉了其对应的输出，从而对其建模，比如回归问题、分类问题</li>
+<li>无监督学习：没有给出正确的答案，只是给出一组数据，让机器自己找出结构。比如分类算法</li>
+</ul>
+<p>无监督学习就像给你39年的降水数据，自动帮你识别出特征(类似于EOF)，比如南方多雨、北方少雨；而对于监督学习就是你除了给机器39年降水数据外，你还要告诉它这一年究竟是属于哪一种，比如三类雨型的某种，从而建立模型，之后就利用模型预测。</p>
+<h2 id="3-模型描述"><a href="#3-模型描述" class="headerlink" title="3.模型描述"></a>3.模型描述</h2><p><strong>h -&gt; hypothesis</strong></p>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817181232325.png" alt="image-20200817181232325"></p>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817185203513.png" alt="image-20200817185203513"></p>
+<h3 id="3-1-代价函数-cost-function"><a href="#3-1-代价函数-cost-function" class="headerlink" title="3.1 代价函数(cost function)"></a>3.1 代价函数(cost function)</h3><p>目的是为了得到最优的参数，比如线性回归就是最小二乘函数<strong>最小</strong></p>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817185241613.png" alt="image-20200817185241613"></p>
+<p>代价函数的参数为(θ0，θ1)，老师没有直接用导数的方法来求得最优化值，而是画出了代价函数 <strong>J</strong> 随θ的变化图像，二维参数使用等高线。</p>
+<h3 id="3-2-梯度下降"><a href="#3-2-梯度下降" class="headerlink" title="3.2 梯度下降"></a>3.2 梯度下降</h3><p>最优化任意函数 <strong>J(θ,…)</strong></p>
+<blockquote>
+<p>步骤</p>
+</blockquote>
+<ul>
+<li>给定参数初值</li>
+<li>从初值开始，找到一个下降最快的方向，前进一小步</li>
+<li>不断前进</li>
+</ul>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817190256057.png" alt="image-20200817190256057"></p>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817191426758.png" alt="image-20200817191426758"></p>
+<p>同时更新θ0和θ1，右边的步骤是错误的。</p>
+]]></content>
+      <categories>
+        <category>机器学习课程</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>吴恩达</tag>
+        <tag>机器学习入门</tag>
       </tags>
   </entry>
 </search>
