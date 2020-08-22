@@ -11,7 +11,52 @@
       </tags>
   </entry>
   <entry>
-    <title>datawhale机器学习第一课(logit回归)</title>
+    <title>机器学习初学课程</title>
+    <url>/posts/4661ff3d.html</url>
+    <content><![CDATA[<h2 id="1-导论"><a href="#1-导论" class="headerlink" title="1.导论"></a>1.导论</h2><ul>
+<li>ML用于数据挖掘、推荐系统、以及学习人类大脑如何运作。</li>
+</ul>
+<blockquote>
+<p>什么是机器学习？</p>
+</blockquote>
+<p>Arthur Samuel(1959)：gives computers the ability to learn without being explicitly programmed.</p>
+<p>Tom Mitchell(1998): 对于任务T，通过完成T的经验E，来提高对于任务T的完成率。</p>
+<a id="more"></a>
+<h2 id="2-监督以及无监督学习"><a href="#2-监督以及无监督学习" class="headerlink" title="2.监督以及无监督学习"></a>2.监督以及无监督学习</h2><ul>
+<li>监督学习：给出一系列<strong>真实的</strong>输入，并告诉了其对应的输出，从而对其建模，比如回归问题、分类问题</li>
+<li>无监督学习：没有给出正确的答案，只是给出一组数据，让机器自己找出结构。比如分类算法</li>
+</ul>
+<p>无监督学习就像给你39年的降水数据，自动帮你识别出特征(类似于EOF)，比如南方多雨、北方少雨；而对于监督学习就是你除了给机器39年降水数据外，你还要告诉它这一年究竟是属于哪一种，比如三类雨型的某种，从而建立模型，之后就利用模型预测。</p>
+<h2 id="3-模型描述"><a href="#3-模型描述" class="headerlink" title="3.模型描述"></a>3.模型描述</h2><p><strong>h -&gt; hypothesis</strong></p>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817181232325.png" alt="image-20200817181232325"></p>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817185203513.png" alt="image-20200817185203513"></p>
+<h3 id="3-1-代价函数-cost-function"><a href="#3-1-代价函数-cost-function" class="headerlink" title="3.1 代价函数(cost function)"></a>3.1 代价函数(cost function)</h3><p>目的是为了得到最优的参数，比如线性回归就是最小二乘函数<strong>最小</strong></p>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817185241613.png" alt="image-20200817185241613"></p>
+<p>代价函数的参数为(θ0，θ1)，老师没有直接用导数的方法来求得最优化值，而是画出了代价函数 <strong>J</strong> 随θ的变化图像，二维参数使用等高线。</p>
+<h3 id="3-2-梯度下降"><a href="#3-2-梯度下降" class="headerlink" title="3.2 梯度下降"></a>3.2 梯度下降</h3><p>最优化任意函数 <strong>J(θ,…)</strong></p>
+<blockquote>
+<p>步骤</p>
+</blockquote>
+<ul>
+<li>给定参数初值</li>
+<li>从初值开始，找到一个下降最快的方向，前进一小步</li>
+<li>不断前进</li>
+</ul>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817190256057.png" alt="image-20200817190256057"></p>
+<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817191426758.png" alt="image-20200817191426758"></p>
+<p>同时更新θ0和θ1，右边的步骤是错误的。</p>
+]]></content>
+      <categories>
+        <category>机器学习课程</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>吴恩达</tag>
+        <tag>机器学习入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>datawhale机器学习(一)-逻辑回归</title>
     <url>/posts/cf91a0de.html</url>
     <content><![CDATA[<h2 id="1-摘要"><a href="#1-摘要" class="headerlink" title="1.摘要"></a>1.摘要</h2><p>logit回归是一种二元或多元回归，属于广义线性回归。其与一般的线性回归的区别在于：logit回归值为离散，而线性回归值为连续。其通常用于分类问题，从机器学习的角度来说，其属于监督学习，即在训练时同时给出预测结果，这是其与聚类分析的差别。logit回归使用的是非线性模型，因为其引入了<code>sigmod函数</code>:$y=\frac{1}{1+e^{-z}}$，其中$z = \theta^T·x$，$\theta$为要训练的参数。</p>
 <a id="more"></a>
@@ -101,53 +146,121 @@ f(x)=\left\{
       </categories>
       <tags>
         <tag>机器学习</tag>
-        <tag>datawhale</tag>
         <tag>机器学习入门</tag>
+        <tag>datawhale</tag>
       </tags>
   </entry>
   <entry>
-    <title>机器学习初学课程</title>
-    <url>/posts/4661ff3d.html</url>
-    <content><![CDATA[<h2 id="1-导论"><a href="#1-导论" class="headerlink" title="1.导论"></a>1.导论</h2><ul>
-<li>ML用于数据挖掘、推荐系统、以及学习人类大脑如何运作。</li>
-</ul>
-<blockquote>
-<p>什么是机器学习？</p>
-</blockquote>
-<p>Arthur Samuel(1959)：gives computers the ability to learn without being explicitly programmed.</p>
-<p>Tom Mitchell(1998): 对于任务T，通过完成T的经验E，来提高对于任务T的完成率。</p>
+    <title>datawhale机器学习(二)-决策树</title>
+    <url>/posts/f862962d.html</url>
+    <content><![CDATA[<h1 id="1-决策树理论"><a href="#1-决策树理论" class="headerlink" title="1.决策树理论"></a>1.决策树理论</h1><h2 id="1-1-概要"><a href="#1-1-概要" class="headerlink" title="1.1 概要"></a>1.1 概要</h2><p>决策树属于分类模型，且属于监督学习。总的模型架构类似于编程中不断嵌套的<code>if-else</code>语句，通过训练数据建立模型，在预测时将预测数据的各个特征代入模型，经过不断的判断(分支)，可以到达一个不同特征满足一定条件的区域，在模型中被称为<strong>叶节点</strong>。在这个区域中，所有的输入数据都将对应同一个输出，即被预测为同一个类别。</p>
 <a id="more"></a>
-<h2 id="2-监督以及无监督学习"><a href="#2-监督以及无监督学习" class="headerlink" title="2.监督以及无监督学习"></a>2.监督以及无监督学习</h2><ul>
-<li>监督学习：给出一系列<strong>真实的</strong>输入，并告诉了其对应的输出，从而对其建模，比如回归问题、分类问题</li>
-<li>无监督学习：没有给出正确的答案，只是给出一组数据，让机器自己找出结构。比如分类算法</li>
-</ul>
-<p>无监督学习就像给你39年的降水数据，自动帮你识别出特征(类似于EOF)，比如南方多雨、北方少雨；而对于监督学习就是你除了给机器39年降水数据外，你还要告诉它这一年究竟是属于哪一种，比如三类雨型的某种，从而建立模型，之后就利用模型预测。</p>
-<h2 id="3-模型描述"><a href="#3-模型描述" class="headerlink" title="3.模型描述"></a>3.模型描述</h2><p><strong>h -&gt; hypothesis</strong></p>
-<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817181232325.png" alt="image-20200817181232325"></p>
-<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817185203513.png" alt="image-20200817185203513"></p>
-<h3 id="3-1-代价函数-cost-function"><a href="#3-1-代价函数-cost-function" class="headerlink" title="3.1 代价函数(cost function)"></a>3.1 代价函数(cost function)</h3><p>目的是为了得到最优的参数，比如线性回归就是最小二乘函数<strong>最小</strong></p>
-<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817185241613.png" alt="image-20200817185241613"></p>
-<p>代价函数的参数为(θ0，θ1)，老师没有直接用导数的方法来求得最优化值，而是画出了代价函数 <strong>J</strong> 随θ的变化图像，二维参数使用等高线。</p>
-<h3 id="3-2-梯度下降"><a href="#3-2-梯度下降" class="headerlink" title="3.2 梯度下降"></a>3.2 梯度下降</h3><p>最优化任意函数 <strong>J(θ,…)</strong></p>
+<p><strong>举个例子</strong></p>
+<p><img src="../images/datawhale%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%BA%8C-%E5%86%B3%E7%AD%96%E6%A0%91/index.png" alt="index"></p>
+<p><img src="../images/datawhale%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%BA%8C-%E5%86%B3%E7%AD%96%E6%A0%91/index-1598104710164.png" alt="index"></p>
 <blockquote>
-<p>步骤</p>
+<p>图片来自：<a href="https://zhuanlan.zhihu.com/p/26703300">https://zhuanlan.zhihu.com/p/26703300</a> (西瓜书)</p>
 </blockquote>
+<h2 id="1-2-模型的建立"><a href="#1-2-模型的建立" class="headerlink" title="1.2 模型的建立"></a>1.2 模型的建立</h2><p>对于决策树模型的建立，最关键的步骤在于：</p>
+<ol>
+<li>树怎么长，也就是树怎么分支，关于这个问题有很多种算法，比如<code>ID3算法</code>，<code>C4.5算法</code>，<code>CART算法</code>等，不同的算法可能会导致分支的标准不同。</li>
+<li>树长到什么时候结束，树如果长的太浅，就会导致欠拟合，即最后的叶节点中含有较大的不同类型占比，信息较混乱，会导致预测错误率较高；如果长得太深，则可能会导致过拟合问题。</li>
+</ol>
+<h3 id="1-2-1-树怎么长"><a href="#1-2-1-树怎么长" class="headerlink" title="1.2.1 树怎么长"></a><strong>1.2.1 树怎么长</strong></h3><p>决策树算法的关键就在于其如何分裂，因此需要建立指标来衡量分裂的好坏。根据实际情况，我们希望树分支后的各个节点里的数据类型较为<strong>单一</strong>，也就是较”纯”，不同的算法其度量方法也不一样。</p>
+<p><strong>ID3算法</strong></p>
+<p>将<code>信息熵</code>的概念引入到模型中来计算信息的纯度，通过计算<code>信息增益</code>来确定模型。</p>
+<p><strong>信息熵的定义为:</strong><script type="math/tex">Ent(D)=-\sum_{k=1}^{n}P_k log_2P_k</script></p>
+<p>D代表当前的样本集合,n代表当前的样本可以分为n类。</p>
+<p><strong>条件熵的定义为：</strong></p>
+<p>将当前的样本集合D按照某一个<strong>特征</strong>分类，假该特征有m个离散属性，那么假设按照该特征分类，条件熵为：</p>
+<script type="math/tex; mode=display">\sum_{i=1}^{m} \frac {Num(D_i)}{Num(D)}Ent(D_i)</script><p>$Num(D_i)$表示不同离散属性对应得样本数量，$Num(D)$则代表总数量，相除用以表示权重</p>
+<p><strong>信息增益</strong></p>
+<p>用属性a对样本D进行分类</p>
+<script type="math/tex; mode=display">Gain(D,a)=Ent(D)-\sum_{i=1}^{m} \frac {Num(D_i)}{Num(D)}Ent(D_i)</script><p>其实引入<code>条件熵</code>这个概念就足够了,因为对于一个已知的样本集D，其<code>信息熵</code>是确定的，信息熵代表了信息的混乱程度，信息熵越大，代表样本中的类别越不纯。而条件熵其实就代表的是按照这个标准分叉之后的样本纯度，信息增益为它们之差，代表的是样本混乱程度的减少情况，因此，信息增益越大，代表该分类越好。</p>
+<blockquote>
+<p>下面是一个例子，来自<a href="https://zhuanlan.zhihu.com/p/26760551">https://zhuanlan.zhihu.com/p/26760551</a></p>
+</blockquote>
+<p> <img src="../images/datawhale%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%BA%8C-%E5%86%B3%E7%AD%96%E6%A0%91/index-1598104738266.png" alt="index"></p>
+<p><strong>ID3算法的缺点：</strong> 其对于含有较多分类的属性来说有偏好性，网上大家都举的是将编号作为一个特征进行分类，那么其得到的信息增益是最大的，这是因为每一个编号都只对应一个输出，因为$logP=0$，其总的条件熵也为0。</p>
+<p>而从本质上来说，这应该是一个过拟合问题，选用类别较多的特征进行分类，其分出来的各个子样本虽然纯度高，但是数量少，会使得模型不具有泛化能力。</p>
+<p><strong>其他算法</strong></p>
+<p>为了改进ID3算法的缺点，提出了C4.5算法，其提出了信息增益率的概念，即给信息增益乘了一个系数，这个系数对于类别多的特征来说会很小，从而平衡上面的问题，但是其由于在分母上，又会存在偏好类别少的样本的特点。</p>
+<p>上面的ID3和C4.5算法都是基于信息熵作为衡量指标进行分类，而CART算法则提出了<code>基尼系数</code>的概念，CART算法是一个二叉树模型。</p>
+<p>基尼系数用来表示在一个样本集合中，同时抽取两个样本，这两个样本所属的类别不同的概率。用基尼系数来衡量样本的纯度，基尼系数越小，则样本越纯。</p>
+<blockquote>
+<p>关于三种算法\<br><a href="https://www.cnblogs.com/mantch/p/11145186.html">https://www.cnblogs.com/mantch/p/11145186.html</a> \<br><a href="https://www.cnblogs.com/pinard/p/6050306.html">https://www.cnblogs.com/pinard/p/6050306.html</a> \</p>
+<p>算法的代码实现\<br><a href="https://blog.csdn.net/v_july_v/article/details/7577684">https://blog.csdn.net/v_july_v/article/details/7577684</a></p>
+</blockquote>
+<h2 id="2-决策树算法的优缺点及技巧"><a href="#2-决策树算法的优缺点及技巧" class="headerlink" title="2.决策树算法的优缺点及技巧"></a>2.决策树算法的优缺点及技巧</h2><p><strong>优点：</strong></p>
+<ol>
+<li>简单直观，生成的决策树很直观.</li>
+</ol>
+<ol>
+<li>基本不需要预处理，不需要提前归一化，处理缺失值。</li>
+</ol>
+<ol>
+<li>使用决策树预测的代价是O(log2m)</li>
+</ol>
+<ol>
+<li>既可以处理离散值也可以处理连续值。很多算法只是专注于离散值或者连续值。</li>
+</ol>
+<ol>
+<li>可以处理多维度输出的分类问题。</li>
+</ol>
+<ol>
+<li>相比于神经网络之类的黑盒分类模型，决策树在逻辑上可以得到很好的解释</li>
+</ol>
+<ol>
+<li>可以交叉验证的剪枝来选择模型，从而提高泛化能力。</li>
+</ol>
+<ol>
+<li>对于异常点的容错能力好，鲁棒性高。</li>
+</ol>
+<p><strong>缺点：</strong></p>
+<ol>
+<li>决策树算法非常容易过拟合，导致泛化能力不强。可以通过设置节点最少样本数量和限制决策树深度来改进。</li>
+</ol>
+<ol>
+<li>决策树会因为样本发生一点点的改动，就会导致树结构的剧烈改变。这个可以通过集成学习之类的方法解决。</li>
+</ol>
+<ol>
+<li>寻找最优的决策树是一个NP难的问题，我们一般是通过启发式方法，容易陷入局部最优。可以通过集成学习之类的方法来改善。</li>
+</ol>
+<ol>
+<li>有些比较复杂的关系，决策树很难学习，比如异或。这个就没有办法了，一般这种关系可以换神经网络分类方法来解决。</li>
+</ol>
+<ol>
+<li>如果某些特征的样本比例过大，生成决策树容易偏向于这些特征。这个可以通过调节样本权重来改善。</li>
+</ol>
+<p><strong>关于过拟合的问题</strong></p>
+<p>即树生长到什么程度，避免过拟合的一个主要方法就是<strong>剪枝</strong></p>
+<p>剪枝又包括<code>先剪枝</code>和<code>后剪枝</code></p>
+<p><strong>先剪枝</strong></p>
+<p><code>先剪枝</code>通过限制决策树的高度和叶子结点处样本的数目来阻止决策树的生长</p>
 <ul>
-<li>给定参数初值</li>
-<li>从初值开始，找到一个下降最快的方向，前进一小步</li>
-<li>不断前进</li>
+<li>定义一个高度，当决策树达到该高度时就可以停止决策树的生长，这是一种最为简单的方法；</li>
 </ul>
-<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817190256057.png" alt="image-20200817190256057"></p>
-<p><img src="/images/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E5%90%B4%E6%81%A9%E8%BE%BE1/image-20200817191426758.png" alt="image-20200817191426758"></p>
-<p>同时更新θ0和θ1，右边的步骤是错误的。</p>
+<ul>
+<li>达到某个结点的实例具有相同的特征向量，即使这些实例不属于同一类，也可以停止决策树的生长。这种方法对于处理数据中的数据冲突问题非常有效；</li>
+</ul>
+<ul>
+<li>定义一个阈值，当达到某个结点的实例个数小于该阈值时就可以停止决策树的生长；</li>
+</ul>
+<ul>
+<li>定义一个阈值，通过计算每次扩张对系统性能的增益，并比较增益值与该阈值的大小来决定是否停止决策树的生长。</li>
+</ul>
+<p><strong>后剪枝</strong></p>
+<p>后剪枝在实际操作中更常用</p>
+<p>后剪枝首先构造完整的决策树，允许树过度拟合训练数据，然后对那些置信度不够的结点子树用叶子结点来代替，该叶子的类标号用该结点子树中最频繁的类标记。</p>
+<p>后剪枝的剪枝过程是删除一些子树，然后用其叶子节点代替，这个叶子节点所标识的类别通过大多数原则(majority class criterion)确定。所谓大多数原则，是指剪枝过程中, 将一些子树删除而用叶节点代替,这个叶节点所标识的类别用这棵子树中大多数训练样本所属的类别来标识,所标识的类称为majority class .相比于先剪枝，这种方法更常用，正是因为在先剪枝方法中精确地估计何时停止树增长很困难。</p>
 ]]></content>
       <categories>
-        <category>机器学习课程</category>
+        <category>datawhale机器学习入门</category>
       </categories>
       <tags>
         <tag>机器学习</tag>
         <tag>机器学习入门</tag>
-        <tag>吴恩达</tag>
+        <tag>datawhale</tag>
       </tags>
   </entry>
 </search>
