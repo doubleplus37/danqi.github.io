@@ -342,4 +342,36 @@ f(x)=\left\{
         <tag>AO</tag>
       </tags>
   </entry>
+  <entry>
+    <title>ENSO对于SSW以及阻塞的调制(文献阅读)</title>
+    <url>/posts/caebd006.html</url>
+    <content><![CDATA[<p>摘要：这篇文章主要探讨了ENSO对<strong>作为SSW前兆的阻塞</strong>发生是否有调制，比如ENSO下主要是大西洋欧洲区域发生阻塞，太平洋区域阻塞很少；而Lanina则太平洋阻塞、西伯利亚阻塞发生频率增加。同时也探讨了ENSO对不同类型的SSW前兆的阻塞是否有调制。此外，在不同位置的阻塞上传的行星波类型(1、2波)不同，并用”线性叠加效应“解释了原因，<strong>此外相同位置阻塞上传的行星波在不同ENSO位相也不相同，但没有解释原因</strong>。此外，还发现<strong>SSW按1、2波分类与按偏移分裂分类不完全一致</strong>的主要原因在于：ENSO下，即使是分裂型，也主要是1波起作用。除了对作为SSW的前兆阻塞有影响外，作者还讨论了ENSO是否会影响所有阻塞，发现其与前兆阻塞影响类似，所以可能是ENSO通过直接调制阻塞，从而影响SSW的发生。</p>
+<a id="more"></a>
+<p><strong>本质上是一篇比较水的文章，在前人不同类型SSW前兆阻塞分布的基础上加上了ENSO的影响进行合成分析，但是可能存在样本数偏少的问题。但是得到了一些有趣的结果：比如在ENSO位相下没有1波型SSW发生，当然这里的1、2波判定标准也可能存在主观问题。另外，文章中核心是ENSO位相通过调制阻塞生成的位置以及持续时间来影响上传的行星波，从而影响不同类型SSW的发生。但是文章中也发现在同一区域的阻塞，在不同ENSO位相下上传的行星波种类也有差异，这一点的原因还值得探讨</strong>。</p>
+<p><img src="../images/ENSO%E5%AF%B9%E4%BA%8ESSW%E4%BB%A5%E5%8F%8A%E9%98%BB%E5%A1%9E%E7%9A%84%E8%B0%83%E5%88%B6-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/image-20200920142721110.png" alt="image-20200920142721110"></p>
+<blockquote>
+<p> Barriopedro D ,  Calvo N . On the Relationship between ENSO,  Stratospheric Sudden Warmings, and Blocking[J]. Journal of Climate,  2014, 27(12):4704-4720.</p>
+</blockquote>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><ul>
+<li>ENSO下，大西洋欧洲阻塞倾向于作为SSW前兆，而LAnina则是太平洋阻塞。并且在ENSO不同位相，SSW前兆阻塞之间的差异大于偏移分裂SSW前兆阻塞的差异，而与1、2波类型差异相当。这可能说明导致偏移、分裂SSW发生的阻塞前兆差异不是特别大，即相同的阻塞信号有可能产生偏移型也有可能分裂型。</li>
+<li>ENSO相比Lanina，大西洋区域的阻塞上传的行星1波要大得多，而在Lanina下，太平洋阻塞导致的2波增强要比其带俩的1波减弱强，总体表现为正值。</li>
+</ul>
+<p><img src="../images/ENSO%E5%AF%B9%E4%BA%8ESSW%E4%BB%A5%E5%8F%8A%E9%98%BB%E5%A1%9E%E7%9A%84%E8%B0%83%E5%88%B6-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/image-20200920150407739.png" alt="image-20200920150407739"></p>
+<ul>
+<li>1、2波SSW并不与偏移、分裂一一对应，主要体现在ENSO位相下分裂型SSW也是1波造成的。</li>
+</ul>
+<p><img src="../images/ENSO%E5%AF%B9%E4%BA%8ESSW%E4%BB%A5%E5%8F%8A%E9%98%BB%E5%A1%9E%E7%9A%84%E8%B0%83%E5%88%B6-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/image-20200920150535155.png" alt="image-20200920150535155"></p>
+<ul>
+<li>ENSO下，阻塞的持续时间与作为SSW前兆的阻塞分布相似，可能代表，ENSO通过影响冬季阻塞的持续时间，从而调制SSW的发生(感觉不是太可信，因为ENSO下大西洋阻塞持续时间更长，但是大西洋阻塞又对应着很大概率偏移型SSW的发生，但在ENSO下，偏移型和分裂型SSW没有明显差异)</li>
+</ul>
+]]></content>
+      <categories>
+        <category>文献阅读</category>
+      </categories>
+      <tags>
+        <tag>文献阅读</tag>
+        <tag>阻塞</tag>
+        <tag>SSW</tag>
+      </tags>
+  </entry>
 </search>
